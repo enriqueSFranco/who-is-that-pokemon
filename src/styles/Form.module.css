@@ -1,0 +1,38 @@
+.boxInput {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 4px;
+
+  & input,
+  button {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  & input {
+    padding-inline: 8px;
+  }
+
+  & button {
+    background-color: #ffcb03;
+    color: #355eaa;
+    font-weight: 700;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    transition: box-shadow .4s ease-in-out;
+  }
+
+  & button:hover {
+    box-shadow: #355eaa 0px 0px 0px 2px;
+  }
+}
