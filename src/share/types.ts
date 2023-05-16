@@ -1,3 +1,8 @@
+export interface RandomPokemon {
+  pokemonName: string
+  pokemonImage: string
+}
+
 export interface Pokemon {
   abilities: Ability[]
   base_experience: number

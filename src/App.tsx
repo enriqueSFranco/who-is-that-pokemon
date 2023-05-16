@@ -7,14 +7,16 @@ import './App.css'
 
 
 function App() {
-  const pokemon = usePokemon()
+  const { pokemon, loading } = usePokemon()
   const [hasWon, toggleWon] = useState<boolean>(false)
+
+  console.log(pokemon)
 
   return (
     <div className='container'>
       <main>
         <h1 className='app_title'>¿Quien es ese Pokémon?</h1>
-        <Pokemon />
+        <Pokemon pokemon={pokemon} loading={loading} />
         <Form />
       </main>
       <Footer />

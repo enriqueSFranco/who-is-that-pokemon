@@ -1,10 +1,17 @@
+import { type RandomPokemon } from '../share/types'
 import styles from '../styles/Pokemon.module.css'
 
-const Pokemon = () => {
+
+interface PokemonProps {
+  pokemon: RandomPokemon | null
+  loading: boolean
+}
+
+const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
   return (
     <figure className={styles.wrapper_pokemon}>
       <img
-        src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png'
+        src={pokemon?.pokemonImage}
         alt="poke"
         style={{ imageRendering: 'pixelated', filter: 'brightness(0)' }}
       />

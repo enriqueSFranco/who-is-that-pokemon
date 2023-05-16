@@ -37,7 +37,7 @@ export const getRandomPokemon = async (): Promise<{ pokemonName: string, pokemon
     const response = await fetch(urlPokeApi)
 
     const { results } = await response.json()
-    const pokemon = results.sort(() => Math.random() - 0.5).slice(0, 1)
+    const pokemon = results.sort(() => Math.random() * results.length)
     const { name: pokemonName, url: urlPokemon } = pokemon[0]
     const pokemonImage: Pokemon = await getDetailsPokemon(urlPokemon)
     return { pokemonName, pokemonImage: getPokemonImage(pokemonImage.sprites) }
