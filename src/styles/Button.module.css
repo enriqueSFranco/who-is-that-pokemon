@@ -1,0 +1,18 @@
+.btn {
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  background-color: #ffcb03;
+  color: #355eaa;
+  font-weight: 700;
+  text-transform: capitalize;
+  border-radius: 5px;
+  width: 50%;
+  cursor: pointer;
+  transition: box-shadow .4s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: #355eaa 0px 0px 0px 2px;
+}
